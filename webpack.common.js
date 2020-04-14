@@ -9,9 +9,9 @@ const appVersion = process.env.npm_package_version
 console.info('Building', appName, appVersion, '\n')
 
 module.exports = {
-	entry: path.join(__dirname, 'src', 'main.js'),
+	entry: path.resolve(path.join('src', 'main.js')),
 	output: {
-		path: path.resolve(__dirname, './js'),
+		path: path.resolve('./js'),
 		publicPath: '/js/',
 		filename: `${appName}.js`,
 		chunkFilename: '[name].js?v=[contenthash]',
