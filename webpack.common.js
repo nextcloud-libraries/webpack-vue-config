@@ -39,11 +39,6 @@ module.exports = {
 				loader: 'babel-loader',
 				exclude: /node_modules/,
 			},
-			{
-				test: /\.svg$/,
-				// illustrations
-				loader: 'svg-inline-loader',
-			},
 		],
 	},
 	plugins: [
