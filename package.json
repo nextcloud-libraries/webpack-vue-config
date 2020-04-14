@@ -19,6 +19,7 @@
 		"webpack",
 		"config"
 	],
+	"main": "index.js",
 	"peerDependencies": {
 		"@babel/core": "^7.9.0",
 		"babel-loader": "^8.1.0",
