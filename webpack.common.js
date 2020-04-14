@@ -6,6 +6,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const appName = process.env.npm_package_name
 const appVersion = process.env.npm_package_version
+console.info('Building', appName, appVersion, '\n')
 
 module.exports = {
 	entry: path.join(__dirname, 'src', 'main.js'),
