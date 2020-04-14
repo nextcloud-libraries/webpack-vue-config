@@ -1,6 +1,8 @@
 const path = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
+const webpack = require('webpack')
+
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const appName = process.env.npm_package_name
 const appVersion = process.env.npm_package_version
