@@ -1,52 +1,55 @@
 const path = require('path')
-const StyleLintPlugin = require('stylelint-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
-const packageJson = require(path.resolve('./package.json'))
-const appName = packageJson.name
+const appName = process.env.npm_package_name
+const appVersion = process.env.npm_package_version
 
 module.exports = {
-	entry: path.resolve(path.join('src', 'main.js')),
+	entry: path.join(__dirname, 'src', 'main.js'),
 	output: {
-		path: path.resolve('./js'),
+		path: path.resolve(__dirname, './js'),
 		publicPath: '/js/',
 		filename: `${appName}.js`,
-		chunkFilename: 'chunks/[name]-[hash].js'
+		chunkFilename: '[name].js?v=[contenthash]',
 	},
 	module: {
 		rules: [
 			{
 				test: /\.css$/,
-				use: ['vue-style-loader', 'css-loader']
+				use: ['vue-style-loader', 'css-loader'],
 			},
 			{
 				test: /\.scss$/,
-				use: ['vue-style-loader', 'css-loader', 'sass-loader']
+				use: ['vue-style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.(js|vue)$/,
 				use: 'eslint-loader',
 				exclude: /node_modules/,
-				enforce: 'pre'
+				enforce: 'pre',
 			},
 			{
 				test: /\.vue$/,
 				loader: 'vue-loader',
-				exclude: /node_modules/
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/
-			}
-		]
+				exclude: /node_modules/,
+			},
+		],
 	},
 	plugins: [
 		new VueLoaderPlugin(),
-		new StyleLintPlugin()
+		new StyleLintPlugin(),
+		// Make appName & appVersion available as a constant
+		new webpack.DefinePlugin({ appName }),
+		new webpack.DefinePlugin({ appVersion }),
 	],
 	resolve: {
 		extensions: ['*', '.js', '.vue'],
-		symlinks: false
-	}
+		symlinks: false,
+	},
 }
