@@ -10,7 +10,7 @@ console.info('Building', appName, appVersion, '\n')
 
 module.exports = {
 	entry: {
-		[appName]: path.join(__dirname, 'src', 'main.js'),
+		[appName]: path.resolve(path.join('src', 'main.js')),
 	},
 	output: {
 		path: path.resolve('./js'),
@@ -49,6 +49,7 @@ module.exports = {
 	plugins: [
 		new VueLoaderPlugin(),
 		new StyleLintPlugin(),
+
 		// Make appName & appVersion available as a constant
 		new webpack.DefinePlugin({ appName }),
 		new webpack.DefinePlugin({ appVersion }),
