@@ -9,12 +9,14 @@ const appVersion = process.env.npm_package_version
 console.info('Building', appName, appVersion, '\n')
 
 module.exports = {
-	entry: path.resolve(path.join('src', 'main.js')),
+	entry: {
+		[appName]: path.resolve(path.join('src', 'main.js')),
+	},
 	output: {
 		path: path.resolve('./js'),
 		publicPath: '/js/',
-		filename: `${appName}.js?v=[contenthash]`,
-		chunkFilename: '[name].js?v=[contenthash]',
+		filename: `[name].js?v=[contenthash]`,
+		chunkFilename: `${appName}.[name].js?v=[contenthash]`,
 	},
 	module: {
 		rules: [
@@ -47,6 +49,7 @@ module.exports = {
 	plugins: [
 		new VueLoaderPlugin(),
 		new StyleLintPlugin(),
+
 		// Make appName & appVersion available as a constant
 		new webpack.DefinePlugin({ appName }),
 		new webpack.DefinePlugin({ appVersion }),
