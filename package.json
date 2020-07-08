@@ -24,8 +24,8 @@
 		"@babel/core": "^7.10.4",
 		"babel-loader": "^8.1.0",
 		"css-loader": "^3.6.0",
-		"eslint": "^5.16.0",
-		"eslint-loader": "^3.0.4",
+		"eslint": "^6.8.0",
+		"eslint-loader": "^4.0.2",
 		"node-sass": "^4.13.1",
 		"sass-loader": "^8.0.2",
 		"stylelint": "^8.4.0",
@@ -40,8 +40,8 @@
 		"@babel/core": "^7.10.4",
 		"babel-loader": "^8.1.0",
 		"css-loader": "^3.6.0",
-		"eslint": "^5.16.0",
-		"eslint-loader": "^3.0.4",
+		"eslint": "^6.8.0",
+		"eslint-loader": "^4.0.2",
 		"node-sass": "^4.13.1",
 		"sass-loader": "^8.0.2",
 		"stylelint": "^8.4.0",
@@ -51,5 +51,8 @@
 		"webpack": "^4.42.1",
 		"webpack-cli": "^3.3.12",
 		"webpack-merge": "^4.2.2"
+	},
+	"dependencies": {
+		"@nextcloud/eslint-config": "^2.1.0"
 	}
 }
