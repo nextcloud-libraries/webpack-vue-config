@@ -23,7 +23,7 @@
 	"peerDependencies": {
 		"@babel/core": "^7.10.4",
 		"babel-loader": "^8.1.0",
-		"css-loader": "^3.5.2",
+		"css-loader": "^3.6.0",
 		"eslint": "^5.16.0",
 		"eslint-loader": "^3.0.4",
 		"node-sass": "^4.13.1",
@@ -39,7 +39,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.10.4",
 		"babel-loader": "^8.1.0",
-		"css-loader": "^3.5.2",
+		"css-loader": "^3.6.0",
 		"eslint": "^5.16.0",
 		"eslint-loader": "^3.0.4",
 		"node-sass": "^4.13.1",
