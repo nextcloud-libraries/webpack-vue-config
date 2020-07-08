@@ -13,7 +13,7 @@ module.exports = {
 	output: {
 		path: path.resolve('./js'),
 		publicPath: '/js/',
-		filename: `${appName}.js`,
+		filename: `${appName}.js?v=[contenthash]`,
 		chunkFilename: '[name].js?v=[contenthash]',
 	},
 	module: {
