@@ -21,7 +21,7 @@
 	],
 	"main": "index.js",
 	"peerDependencies": {
-		"@babel/core": "^7.9.0",
+		"@babel/core": "^7.10.4",
 		"babel-loader": "^8.1.0",
 		"css-loader": "^3.5.2",
 		"eslint": "^5.16.0",
@@ -37,7 +37,7 @@
 		"webpack-merge": "^4.2.2"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.9.0",
+		"@babel/core": "^7.10.4",
 		"babel-loader": "^8.1.0",
 		"css-loader": "^3.5.2",
 		"eslint": "^5.16.0",
