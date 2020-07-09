@@ -4,18 +4,18 @@ const webpack = require('webpack')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-const appName = process.env.npm_package_name
-const appVersion = process.env.npm_package_version
+const appName = JSON.stringify(process.env.npm_package_name)
+const appVersion = JSON.stringify(process.env.npm_package_version)
 console.info('Building', appName, appVersion, '\n')
 
 module.exports = {
 	entry: {
-		[appName]: path.resolve(path.join('src', 'main.js')),
+		main: path.resolve(path.join('src', 'main.js')),
 	},
 	output: {
 		path: path.resolve('./js'),
 		publicPath: '/js/',
-		filename: `[name].js?v=[contenthash]`,
+		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
 	},
 	module: {
