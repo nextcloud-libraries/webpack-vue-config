@@ -17,7 +17,9 @@
 		"vue",
 		"vuejs",
 		"webpack",
-		"config"
+		"config",
+		"stylelint",
+		"eslint"
 	],
 	"main": "index.js",
 	"peerDependencies": {
@@ -26,7 +28,9 @@
 		"css-loader": "^3.6.0",
 		"eslint": "^6.8.0",
 		"eslint-loader": "^4.0.2",
+		"fibers": "^3.1.1",
 		"node-sass": "^4.14.1",
+		"sass": "^1.26.10",
 		"sass-loader": "^8.0.2",
 		"stylelint": "^13.6.1",
 		"stylelint-webpack-plugin": "^2.1.0",
@@ -42,7 +46,9 @@
 		"css-loader": "^3.6.0",
 		"eslint": "^6.8.0",
 		"eslint-loader": "^4.0.2",
+		"fibers": "^3.1.1",
 		"node-sass": "^4.14.1",
+		"sass": "^1.26.10",
 		"sass-loader": "^8.0.2",
 		"stylelint": "^13.6.1",
 		"stylelint-webpack-plugin": "^2.1.0",
@@ -51,6 +57,5 @@
 		"webpack": "^4.43.0",
 		"webpack-cli": "^3.3.12",
 		"webpack-merge": "^4.2.2"
-	},
-	"dependencies": {}
+	}
 }

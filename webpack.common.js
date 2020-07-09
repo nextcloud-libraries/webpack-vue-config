@@ -48,7 +48,9 @@ module.exports = {
 	},
 	plugins: [
 		new VueLoaderPlugin(),
-		new StyleLintPlugin(),
+		new StyleLintPlugin({
+			files: '*.s?(a|c)ss',
+		}),
 
 		// Make appName & appVersion available as a constant
 		new webpack.DefinePlugin({ appName }),
