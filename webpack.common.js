@@ -49,7 +49,7 @@ module.exports = {
 	plugins: [
 		new VueLoaderPlugin(),
 		new StyleLintPlugin({
-			files: '*.s?(a|c)ss',
+			files: 'src/**/*.{css,scss,vue}',
 		}),
 
 		// Make appName & appVersion available as a constant
