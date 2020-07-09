@@ -6,6 +6,7 @@ Use this base config package to cleanup all your complicated setups and rely on 
 
 ```js
 // webpack.js
+
 const webpackConfig = require('webpack-vue-config')
 
 if (process.env.NODE_ENV === 'production') {
@@ -16,6 +17,7 @@ module.exports = webpackConfig.dev
 
 ```json
 // package.json
+
 ...
 "scripts": {
 		"build": "NODE_ENV=production webpack --progress --hide-modules --config webpack.js",
@@ -30,6 +32,7 @@ Here is an example on how to add your own  config to the base one
 
 ```js
 // webpack.js
+
 const path = require('path')
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
