@@ -4,9 +4,9 @@ const webpack = require('webpack')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-const appName = JSON.stringify(process.env.npm_package_name)
-const appVersion = JSON.stringify(process.env.npm_package_version)
-console.info('Building', appName, appVersion, '\n')
+const appName = process.env.npm_package_name
+const appVersion = process.env.npm_package_version
+console.info('Building', appName, appVersion, typeof appName, typeof appVersion, '\n')
 
 module.exports = {
 	entry: {
@@ -53,8 +53,8 @@ module.exports = {
 		}),
 
 		// Make appName & appVersion available as a constant
-		new webpack.DefinePlugin({ appName }),
-		new webpack.DefinePlugin({ appVersion }),
+		new webpack.DefinePlugin({ appName: JSON.stringify(appName) }),
+		new webpack.DefinePlugin({ appVersion: JSON.stringify(appVersion) }),
 	],
 	resolve: {
 		extensions: ['*', '.js', '.vue'],
