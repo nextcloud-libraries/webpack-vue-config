@@ -12,8 +12,9 @@ const webpackConfig = require('@nextcloud/webpack-vue-config')
 
 if (process.env.NODE_ENV === 'production') {
 	module.exports = webpackConfig.prod
+} else {
+	module.exports = webpackConfig.dev
 }
-module.exports = webpackConfig.dev
 ```
 
 ```json
@@ -50,6 +51,7 @@ const config = {
 
 if (process.env.NODE_ENV === 'production') {
 	module.exports = merge(config, webpackConfig.prod)
+} else {
+	module.exports = merge(config, webpackConfig.dev)
 }
-module.exports = merge(config, webpackConfig.dev)
 ```
