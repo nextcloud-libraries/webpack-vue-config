@@ -34,9 +34,9 @@ Here is an example on how to add your own  config to the base one
 ```js
 // webpack.js
 
+const { merge } = require('webpack-merge')
 const path = require('path')
 const webpack = require('webpack')
-const { merge } = require('webpack-merge')
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 
 const config = {
