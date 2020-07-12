@@ -3,11 +3,12 @@
 Use this base config package to cleanup all your complicated setups and rely on automated dependencies updates.
 
 ## How-to
+:warning: Make sure to have all the peer dependencies installed 
 
 ```js
 // webpack.js
 
-const webpackConfig = require('webpack-vue-config')
+const webpackConfig = require('@nextcloud/webpack-vue-config')
 
 if (process.env.NODE_ENV === 'production') {
 	module.exports = webpackConfig.prod
