@@ -47,3 +47,32 @@ const config = {
 
 module.exports = merge(config, webpackConfig)
 ```
+### Override duplicate tests
+If you want to overrride a rule that is already provided by this package, you can use the following to replace duplicates:
+
+```js
+// webpack.js
+
+const { merge } = require('webpack-merge')
+const webpackConfig = require('@nextcloud/webpack-vue-config')
+
+const config = {
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				exclude: /node_modules(?!(\/|\\)(hot-patcher|webdav|camelcase)(\/|\\))/,
+			},
+		],
+	},
+}
+
+const mergedConfigs = merge(config, webpackConfig)
+
+// Remove duplicate rules by the `test` key
+mergedConfigs.module.rules = mergedConfigs.module.rules.filter((v, i, a) => a.findIndex(t => (t.test.toString() === v.test.toString())) === i)
+
+// Merge rules by replacing existing tests
+module.exports = mergedConfigs
+```
