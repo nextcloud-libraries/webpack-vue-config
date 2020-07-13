@@ -86,10 +86,7 @@ If you want to remove a rule (the js for example), extract the test value from t
 // webpack.js
 
 const { merge } = require('webpack-merge')
-const webpack = require('webpack')
 const webpackConfig = require('@nextcloud/webpack-vue-config')
-
-const isTesting = !!process.env.TESTING
 
 const config = {
 	module: {
@@ -100,15 +97,8 @@ const config = {
 				loader: 'babel-loader',
 				exclude: /node_modules(?!(\/|\\)(camelcase|fast-xml-parser|hot-patcher|vue-plyr|webdav)(\/|\\))/,
 			},
-			{
-				test: /\.(png|jpg|gif|svg)$/,
-				loader: 'url-loader',
-			},
 		],
 	},
-	plugins: [
-		new webpack.DefinePlugin({ isTesting }),
-	],
 }
 
 const mergedConfigs = merge(config, webpackConfig)
