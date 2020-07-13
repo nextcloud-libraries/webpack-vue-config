@@ -10,10 +10,7 @@ Use this base config package to cleanup all your complicated setups and rely on 
 
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 
-if (process.env.NODE_ENV === 'production') {
-	module.exports = webpackConfig.prod
-}
-module.exports = webpackConfig.dev
+module.exports = webpackConfig
 ```
 
 ```json
@@ -48,8 +45,5 @@ const config = {
 	],
 }
 
-if (process.env.NODE_ENV === 'production') {
-	module.exports = merge(config, webpackConfig.prod)
-}
-module.exports = merge(config, webpackConfig.dev)
+module.exports = merge(config, webpackConfig)
 ```
