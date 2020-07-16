@@ -6,9 +6,13 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const appName = process.env.npm_package_name
 const appVersion = process.env.npm_package_version
+const buildMode = process.env.NODE_ENV
+const isDev = buildMode === 'development'
 console.info('Building', appName, appVersion, '\n')
 
 module.exports = {
+	mode: buildMode,
+	devtool: isDev ? '#cheap-source-map' : '#source-map',
 	entry: {
 		main: path.resolve(path.join('src', 'main.js')),
 	},
