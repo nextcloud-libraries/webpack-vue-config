@@ -24,7 +24,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const appName = process.env.npm_package_name
@@ -38,6 +38,7 @@ const rules = require('./rules')
 module.exports = {
 	mode: buildMode,
 	devtool: isDev ? 'cheap-source-map' : 'source-map',
+
 	entry: {
 		main: path.resolve(path.join('src', 'main.js')),
 	},
@@ -47,9 +48,17 @@ module.exports = {
 		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
 	},
-	module: {
-		rules
+
+	optimization: {
+		splitChunks: {
+			automaticNameDelimiter: '-',
+		}
 	},
+
+	module: {
+		rules: Object.values(rules)
+	},
+
 	plugins: [
 		new ESLintPlugin({
 			extensions: ['js', 'vue'],
@@ -65,6 +74,7 @@ module.exports = {
 		new webpack.DefinePlugin({ appName: JSON.stringify(appName) }),
 		new webpack.DefinePlugin({ appVersion: JSON.stringify(appVersion) }),
 	],
+
 	resolve: {
 		extensions: ['*', '.js', '.vue'],
 		symlinks: false,

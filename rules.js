@@ -39,7 +39,10 @@
 		exclude: /node_modules/,
 	},
 	RULE_ASSETS: {
-		test: /\.(png|jpe?g|gif|svg)$/,
-		loader: 'url-loader'
+		test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf)$/,
+		loader: 'url-loader',
+		options: {
+			name: '[name].[ext]?[hash]',
+		},
 	},
  }
