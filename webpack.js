@@ -3,6 +3,7 @@ const webpack = require('webpack')
 
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const appName = process.env.npm_package_name
 const appVersion = process.env.npm_package_version
@@ -33,12 +34,6 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
-				test: /\.(js|vue)$/,
-				use: 'eslint-loader',
-				exclude: /node_modules/,
-				enforce: 'pre',
-			},
-			{
 				test: /\.vue$/,
 				loader: 'vue-loader',
 			},
@@ -54,6 +49,11 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new ESLintPlugin({
+			extensions: ['js', 'vue'],
+			files: 'src',
+		}),
+
 		new VueLoaderPlugin(),
 		new StyleLintPlugin({
 			files: 'src/**/*.{css,scss,vue}',
