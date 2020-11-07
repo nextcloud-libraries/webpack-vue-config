@@ -47,66 +47,40 @@ const config = {
 
 module.exports = merge(config, webpackConfig)
 ```
-### Override duplicate tests
-If you want to overrride a rule that is already provided by this package, you can use the following to replace duplicates:
+### Replace existing rule
+All the rules are available indiidually on the `@nextcloud/webpack-vue-config/rules` file. You can import them and use the one you want.
+
+If you want to overrride a rule that is already provided by this package, you can use the following to replace it:
 
 ```js
 // webpack.js
 
 const { merge } = require('webpack-merge')
 const webpackConfig = require('@nextcloud/webpack-vue-config')
+const webpackRules = require('@nextcloud/webpack-vue-config/rules')
 
-const config = {
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules(?!(\/|\\)(hot-patcher|webdav|camelcase)(\/|\\))/,
-			},
-		],
-	},
-}
+// Filter out js rule
+webpackConfig.module.rules = Object.keys(webpackRules)
+	.filter(rule => rule !== 'RULE_JS')
+	.map(rule => webpackRules[rule])
 
-const mergedConfigs = merge(config, webpackConfig)
+// Adding our custom js rule
+webpackConfig.module.rules.push({
+	// vue-plyr uses .mjs file
+	test: /\.m?js$/,
+	loader: 'babel-loader',
+	exclude: BabelLoaderExcludeNodeModulesExcept([
+		'@nextcloud/dialogs',
+		'@nextcloud/event-bus',
+		'camelcase',
+		'fast-xml-parser',
+		'hot-patcher',
+		'semver',
+		'vue-plyr',
+		'webdav',
+		'toastify-js',
+	]),
+})
 
-// Remove duplicate rules by the `test` key
-mergedConfigs.module.rules = mergedConfigs.module.rules.filter((v, i, a) => a.findIndex(t => (t.test.toString() === v.test.toString())) === i)
-
-// Merge rules by replacing existing tests
-module.exports = mergedConfigs
-```
-
-### Target and remove specific rule
-If you want to remove a rule (the js for example), extract the test value from this package rules list. e.g. `/\.js$/`
-
-:warning: Watch out for string escaping. Regex can be different than the required string: `/\.js$/` vs `/\\.js$/`
-
-```js
-// webpack.js
-
-const { merge } = require('webpack-merge')
-const webpackConfig = require('@nextcloud/webpack-vue-config')
-
-const config = {
-	module: {
-		rules: [
-			{
-				// vue-plyr uses .mjs file
-				test: /\.m?js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules(?!(\/|\\)(camelcase|fast-xml-parser|hot-patcher|vue-plyr|webdav)(\/|\\))/,
-			},
-		],
-	},
-}
-
-const mergedConfigs = merge(config, webpackConfig)
-
-// Remove default js rule
-const jsRuleIndex = mergedConfigs.module.rules.findIndex(rule => rule.test.toString() === '/\\.js$/')
-mergedConfigs.module.rules.splice(jsRuleIndex, 1)
-
-// Merge rules by replacing existing tests
-module.exports = mergedConfigs
+module.exports = webpackConfig
 ```

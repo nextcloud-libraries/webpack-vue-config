@@ -1,3 +1,25 @@
+/**
+ * @copyright Copyright (c) 2020 John Molakvoæ <skjnldsv@protonmail.com>
+ *
+ * @author John Molakvoæ <skjnldsv@protonmail.com>
+ *
+ * @license GNU AGPL version 3 or any later version
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 const path = require('path')
 const webpack = require('webpack')
 
@@ -11,9 +33,11 @@ const buildMode = process.env.NODE_ENV
 const isDev = buildMode === 'development'
 console.info('Building', appName, appVersion, '\n')
 
+const rules = require('./rules')
+
 module.exports = {
 	mode: buildMode,
-	devtool: isDev ? '#cheap-source-map' : '#source-map',
+	devtool: isDev ? 'cheap-source-map' : 'source-map',
 	entry: {
 		main: path.resolve(path.join('src', 'main.js')),
 	},
@@ -24,29 +48,7 @@ module.exports = {
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
 	},
 	module: {
-		rules: [
-			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
-			},
-			{
-				test: /\.scss$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
-			},
-			{
-				test: /\.vue$/,
-				loader: 'vue-loader',
-			},
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
-			},
-			{
-				test: /\.(png|jpg|gif|svg)$/,
-				loader: 'url-loader'
-			},
-		],
+		rules
 	},
 	plugins: [
 		new ESLintPlugin({
