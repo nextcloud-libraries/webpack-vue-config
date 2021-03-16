@@ -18,7 +18,7 @@ module.exports = webpackConfig
 
 ...
 "scripts": {
-		"build": "NODE_ENV=production webpack --progress --hide-modules --config webpack.js",
+		"build": "NODE_ENV=production webpack --progress --config webpack.js",
 		"dev": "NODE_ENV=development webpack --progress --config webpack.js",
 		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
 }
