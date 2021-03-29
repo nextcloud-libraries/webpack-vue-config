@@ -47,7 +47,7 @@ const config = {
 
 module.exports = merge(config, webpackConfig)
 ```
-### Replace existing rule
+### Replace/edit existing rule
 All the rules are available indiidually on the `@nextcloud/webpack-vue-config/rules` file. You can import them and use the one you want.
 
 If you want to overrride a rule that is already provided by this package, you can use the following to replace it:
@@ -55,32 +55,27 @@ If you want to overrride a rule that is already provided by this package, you ca
 ```js
 // webpack.js
 
-const { merge } = require('webpack-merge')
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 const webpackRules = require('@nextcloud/webpack-vue-config/rules')
 
-// Filter out js rule
-webpackConfig.module.rules = Object.keys(webpackRules)
-	.filter(rule => rule !== 'RULE_JS')
-	.map(rule => webpackRules[rule])
+const BabelLoaderExcludeNodeModulesExcept = require('babel-loader-exclude-node-modules-except')
 
-// Adding our custom js rule
-webpackConfig.module.rules.push({
-	// vue-plyr uses .mjs file
-	test: /\.m?js$/,
-	loader: 'babel-loader',
-	exclude: BabelLoaderExcludeNodeModulesExcept([
-		'@nextcloud/dialogs',
-		'@nextcloud/event-bus',
-		'camelcase',
-		'fast-xml-parser',
-		'hot-patcher',
-		'semver',
-		'vue-plyr',
-		'webdav',
-		'toastify-js',
-	]),
-})
+// Edit JS rule
+webpackRules.RULE_JS.test = /\.m?js$/
+webpackRules.RULE_JS.exclude = BabelLoaderExcludeNodeModulesExcept([
+	'@nextcloud/dialogs',
+	'@nextcloud/event-bus',
+	'camelcase',
+	'fast-xml-parser',
+	'hot-patcher',
+	'semver',
+	'vue-plyr',
+	'webdav',
+	'toastify-js',
+])
+
+// Replaces rules array
+webpackConfig.module.rules = Object.values(webpackRules)
 
 module.exports = webpackConfig
 ```
