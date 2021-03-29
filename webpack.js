@@ -23,9 +23,10 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const StyleLintPlugin = require('stylelint-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const appName = process.env.npm_package_name
 const appVersion = process.env.npm_package_version
@@ -52,11 +53,17 @@ module.exports = {
 	optimization: {
 		splitChunks: {
 			automaticNameDelimiter: '-',
-		}
+		},
+		minimize: !isDev,
+		minimizer: [
+			new TerserPlugin({
+				extractComments: false,
+			}),
+		],
 	},
 
 	module: {
-		rules: Object.values(rules)
+		rules: Object.values(rules),
 	},
 
 	plugins: [
