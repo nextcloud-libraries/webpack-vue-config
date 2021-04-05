@@ -63,7 +63,7 @@ module.exports = {
 						comments: false,
 					}
 				},
-				extractComments: false,
+				extractComments: true,
 			}),
 		],
 	},
