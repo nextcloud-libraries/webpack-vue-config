@@ -41,7 +41,7 @@ webpackConfig.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
 module.exports = webpackConfig
 ```
 ### Replace/edit existing rule
-All the rules are available indiidually on the `@nextcloud/webpack-vue-config/rules` file. You can import them and use the one you want.
+All the rules are available individually on the `@nextcloud/webpack-vue-config/rules` file. You can import them and use the one you want.
 
 If you want to overrride a rule that is already provided by this package, you can use the following to replace it:
 
