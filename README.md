@@ -31,21 +31,14 @@ Here is an example on how to add your own  config to the base one
 ```js
 // webpack.js
 
-const { merge } = require('webpack-merge')
 const path = require('path')
 const webpack = require('webpack')
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 
-const config = {
-	entry: {
-		'files-action': path.join(__dirname, 'src', 'files_action.js'),
-	},
-	plugins: [
-		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-	],
-}
+webpackConfig.entry['files-action'] = path.join(__dirname, 'src', 'files_action.js')
+webpackConfig.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
 
-module.exports = merge(config, webpackConfig)
+module.exports = webpackConfig
 ```
 ### Replace/edit existing rule
 All the rules are available indiidually on the `@nextcloud/webpack-vue-config/rules` file. You can import them and use the one you want.
