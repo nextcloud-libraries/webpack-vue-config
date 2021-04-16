@@ -49,9 +49,7 @@ module.exports = {
 		publicPath: '/js/',
 		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
-		// Make sure sourcemaps have proper namespace
-		// https://webpack.js.org/configuration/output/#outputdevtoolnamespace
-		library: appName,
+		devtoolNamespace: appName,
 	},
 
 	optimization: {
