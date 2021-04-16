@@ -49,6 +49,14 @@ module.exports = {
 		publicPath: '/js/',
 		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
+		// Make sure sourcemaps have a proper path and do not
+		// leak local paths https://github.com/webpack/webpack/issues/3603
+		devtoolNamespace: appName,
+		devtoolModuleFilenameTemplate(info) {
+			const rootDir = process.cwd()
+			const rel = path.relative(rootDir, info.absoluteResourcePath)
+			return `webpack:///${appName}/${rel}`
+		},
 	},
 
 	optimization: {
