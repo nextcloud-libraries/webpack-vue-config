@@ -38,6 +38,7 @@ console.info('Building', appName, appVersion, '\n')
 const rules = require('./rules')
 
 module.exports = {
+	target: 'web',
 	mode: buildMode,
 	devtool: isDev ? 'cheap-source-map' : 'source-map',
 
@@ -46,7 +47,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve('./js'),
-		publicPath: '/js/',
+		publicPath: path.join('/apps/', appName, '/js/'),
 		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
 		// Make sure sourcemaps have a proper path and do not
@@ -59,6 +60,16 @@ module.exports = {
 		},
 	},
 
+	devServer: {
+		hot: true,
+		port: 3000,
+		writeToDisk: true,
+		host: '127.0.0.1',
+		headers: {
+			'Access-Control-Allow-Origin': '*',
+		},
+	},
+	
 	optimization: {
 		splitChunks: {
 			automaticNameDelimiter: '-',
