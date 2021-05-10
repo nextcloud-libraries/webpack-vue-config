@@ -24,11 +24,34 @@ module.exports = webpackConfig
 		"build": "NODE_ENV=production webpack --progress --config webpack.js",
 		"dev": "NODE_ENV=development webpack --progress --config webpack.js",
 		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
+		"serve": "NODE_ENV=development webpack serve --progress --config webpack.js",
 }
 ...
 ```
 
+## Hot module replacement
+
+To enjoy hot module replacement, follow those instructions:
+
+- Install the [`HMREnabler`](https://github.com/nextcloud/hmr_enabler) server app. This will tweak the CSP header so do not use it in production !
+- Add the `serve` script to your `package.json` as listed above.
+- Add `js/*hot-update.*` to you `.gitignore`. This is necessary because we write every files on disk so the nextcloud server can serve them.
+- Add the following line in your Vue app entry file so Webpack knows where to fetch updates, [see this example](https://github.com/nextcloud/app-tutorial/blob/master/src/main.js). You might not need it as it default to `/apps/<your_app_name>/js/`.
+
+```js
+__webpack_public_path__ = generateFilePath(appName, '', 'js/')
+```
+
+You can then start you dev serve with `npm serve` or `make serve-js` if you added this step in your makefile.
+
+If your nextcloud hostname is different from `localhost`, you need to start the server like so:
+
+```shell
+npm run serve -- --allowed-hosts your-hostname.example
+```
+
 ## Extend with your own configs
+
 Here is an example on how to add your own  config to the base one
 
 ```js
