@@ -71,6 +71,7 @@ module.exports = {
 	},
 	
 	optimization: {
+		chunkIds: 'named',
 		splitChunks: {
 			automaticNameDelimiter: '-',
 		},
