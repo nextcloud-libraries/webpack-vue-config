@@ -96,11 +96,13 @@ module.exports = {
 		new ESLintPlugin({
 			extensions: ['js', 'vue'],
 			files: 'src',
+			failOnError: !isDev,
 		}),
 
 		new VueLoaderPlugin(),
 		new StyleLintPlugin({
 			files: 'src/**/*.{css,scss,vue}',
+			failOnError: !isDev,
 		}),
 
 		// Make sure we auto-inject node polyfills on demand
