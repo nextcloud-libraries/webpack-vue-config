@@ -16,16 +16,16 @@ const webpackConfig = require('@nextcloud/webpack-vue-config')
 module.exports = webpackConfig
 ```
 
-```json
+```js
 // package.json
 
 ...
-"scripts": {
+	"scripts": {
 		"build": "NODE_ENV=production webpack --progress --config webpack.js",
 		"dev": "NODE_ENV=development webpack --progress --config webpack.js",
 		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
 		"serve": "NODE_ENV=development webpack serve --progress --config webpack.js",
-}
+	}
 ...
 ```
 
