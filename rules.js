@@ -40,9 +40,6 @@
 	},
 	RULE_ASSETS: {
 		test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf)$/,
-		loader: 'url-loader',
-		options: {
-			name: '[name].[ext]?[hash]',
-		},
+		type: 'asset/inline',
 	},
  }
