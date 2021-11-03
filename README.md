@@ -6,8 +6,6 @@
 Use this base config package to cleanup all your complicated setups and rely on automated dependencies updates.
 
 ## How-to
-:warning: Make sure to have all the peer dependencies installed 
-
 ```js
 // webpack.js
 

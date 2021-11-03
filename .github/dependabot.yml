@@ -10,3 +10,14 @@ updates:
     open-pull-requests-limit: 10
     labels:
     - dependencies
+
+  - package-ecosystem: npm
+    directory: "/tests"
+    schedule:
+      interval: weekly
+      day: saturday
+      time: "03:00"
+      timezone: Europe/Paris
+    open-pull-requests-limit: 10
+    labels:
+    - dependencies
