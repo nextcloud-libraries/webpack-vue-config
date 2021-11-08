@@ -1,5 +1,11 @@
 # Changelog
 
+## [v4.1.4](https://github.com/nextcloud/webpack-vue-config/tree/v4.1.4) (2021-11-08)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.1.3...v4.1.4)
+
+* Limit webpack update to patch versions of 5.46 by @artonge in https://github.com/nextcloud/webpack-vue-config/pull/238
+
 ## [v4.1.3](https://github.com/nextcloud/webpack-vue-config/tree/v4.1.3) (2021-11-08)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.1.2...v4.1.3)
