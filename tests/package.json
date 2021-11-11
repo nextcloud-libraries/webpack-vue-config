@@ -1,6 +1,7 @@
 {
   "name": "webpack-vue-config-test",
   "version": "1.0.0",
+  "main": "js/webpack-vue-config-test-main.js",
   "description": "Testing package for the @nextcloud/webpack-vue-config library",
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --config webpack.js",
@@ -18,7 +19,7 @@
     "@nextcloud/babel-config": "^1.0.0",
     "@nextcloud/browserslist-config": "^2.2.0",
     "@nextcloud/eslint-config": "^6.1.0",
-    "@nextcloud/stylelint-config": "^1.0.0-beta.0",
+    "@nextcloud/stylelint-config": "^2.0.1",
     "@nextcloud/webpack-vue-config": "file:.."
   }
 }
