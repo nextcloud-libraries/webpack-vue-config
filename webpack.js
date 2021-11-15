@@ -62,9 +62,14 @@ module.exports = {
 
 	devServer: {
 		hot: true,
-		port: 3000,
-		writeToDisk: true,
 		host: '127.0.0.1',
+		port: 3000,
+		client: {
+			overlay: false,
+		},
+		devMiddleware: {
+			writeToDisk: true,
+		},
 		headers: {
 			'Access-Control-Allow-Origin': '*',
 		},
