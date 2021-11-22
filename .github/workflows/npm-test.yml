@@ -34,7 +34,10 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
+          npm pack
           cd tests
           npm ci
+          version=$(cat ../package.json | jq --raw-output .version)
+          npm install -D ../nextcloud-webpack-vue-config-$version.tgz
           npm run dev
           npm run build
