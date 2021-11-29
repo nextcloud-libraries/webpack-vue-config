@@ -31,10 +31,18 @@ jobs:
       - name: Set up npm ${{ steps.versions.outputs.npmVersion }}
         run: npm i -g npm@"${{ steps.versions.outputs.npmVersion }}"
 
-      - name: Install dependencies & build
+      - name: Install webpack-vue-config dependencies & build
         run: |
           npm ci
+          npm pack
+
+      - name: Install dependencies & build test app
+        run: |
           cd tests
           npm ci
+          # Manually install dependency to check for incompatibilities
+          version=$(cat ../package.json | jq --raw-output .version)
+          npm install -D ../nextcloud-webpack-vue-config-$version.tgz
+          # Build test app dev and production
           npm run dev
           npm run build
