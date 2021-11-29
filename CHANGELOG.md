@@ -1,10 +1,21 @@
 # Changelog
 
+## [v4.2.0](https://github.com/nextcloud/webpack-vue-config/tree/v4.2.0) (2021-11-29)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.1.2...v4.2.0)
+
+- Update npm and node engines versions by @nextcloud-command in <https://github.com/nextcloud/webpack-vue-config/pull/241>
+- Bump eslint-webpack-plugin from 3.1.0 to 3.1.1 by @dependabot in <https://github.com/nextcloud/webpack-vue-config/pull/244>
+- Fix HMR by @jotoeri in <https://github.com/nextcloud/webpack-vue-config/pull/246>
+- Bump webpack-dev-server from 4.4.0 to 4.5.0 by @dependabot in <https://github.com/nextcloud/webpack-vue-config/pull/249>
+- Bump sass from 1.43.4 to 1.43.5 by @dependabot in <https://github.com/nextcloud/webpack-vue-config/pull/252>
+- Move stylelint to 14 by @skjnldsv in <https://github.com/nextcloud/webpack-vue-config/pull/242>
+
 ## [v4.1.4](https://github.com/nextcloud/webpack-vue-config/tree/v4.1.4) (2021-11-08)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.1.3...v4.1.4)
 
-* Limit webpack update to patch versions of 5.46 by @artonge in https://github.com/nextcloud/webpack-vue-config/pull/238
+- Limit webpack update to patch versions of 5.46 by @artonge in <https://github.com/nextcloud/webpack-vue-config/pull/238>
 
 ## [v4.1.3](https://github.com/nextcloud/webpack-vue-config/tree/v4.1.3) (2021-11-08)
 
@@ -12,9 +23,9 @@
 
 **Merged pull requests:**
 
-* Change webpack version in peerDep to match devDep by @artonge in https://github.com/nextcloud/webpack-vue-config/pull/233
-* Bump webpack from 5.46.0 to 5.62.1 by @dependabot in https://github.com/nextcloud/webpack-vue-config/pull/235
-* Bump css-loader from 6.5.0 to 6.5.1 by @dependabot in https://github.com/nextcloud/webpack-vue-config/pull/236
+- Change webpack version in peerDep to match devDep by @artonge in <https://github.com/nextcloud/webpack-vue-config/pull/233>
+- Bump webpack from 5.46.0 to 5.62.1 by @dependabot in <https://github.com/nextcloud/webpack-vue-config/pull/235>
+- Bump css-loader from 6.5.0 to 6.5.1 by @dependabot in <https://github.com/nextcloud/webpack-vue-config/pull/236>
 
 ## [v4.1.2](https://github.com/nextcloud/webpack-vue-config/tree/v4.1.2) (2021-11-03)
 
