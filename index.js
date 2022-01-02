@@ -20,4 +20,4 @@
  *
  */
 
-module.exports = require('./webpack.js')
+module.exports = require('./webpack.config.js')

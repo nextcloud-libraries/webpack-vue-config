@@ -7,7 +7,7 @@ Use this base config package to cleanup all your complicated setups and rely on 
 
 ## How-to
 ```js
-// webpack.js
+// webpack.config.js
 
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 
@@ -19,10 +19,10 @@ module.exports = webpackConfig
 
 ...
 	"scripts": {
-		"build": "webpack --node-env production --progress --config webpack.js",
-		"dev": "webpack --node-env development --progress --config webpack.js",
-		"watch": "webpack --node-env development --progress --watch --config webpack.js",
-		"serve": "webpack --node-env development serve --progress --config webpack.js",
+		"build": "webpack --node-env production --progress",
+		"dev": "webpack --node-env development --progress",
+		"watch": "webpack --node-env development --progress --watch",
+		"serve": "webpack --node-env development serve --progress",
 	}
 ...
 ```
@@ -53,7 +53,7 @@ npm run serve -- --allowed-hosts your-hostname.example
 Here is an example on how to add your own  config to the base one
 
 ```js
-// webpack.js
+// webpack.config.js
 
 const path = require('path')
 const webpack = require('webpack')
@@ -70,7 +70,7 @@ All the rules are available individually on the `@nextcloud/webpack-vue-config/r
 If you want to overrride a rule that is already provided by this package, you can use the following to replace it:
 
 ```js
-// webpack.js
+// webpack.config.js
 
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 const webpackRules = require('@nextcloud/webpack-vue-config/rules')
