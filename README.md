@@ -19,10 +19,10 @@ module.exports = webpackConfig
 
 ...
 	"scripts": {
-		"build": "NODE_ENV=production webpack --progress --config webpack.js",
-		"dev": "NODE_ENV=development webpack --progress --config webpack.js",
-		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
-		"serve": "NODE_ENV=development webpack serve --progress --config webpack.js",
+		"build": "webpack --node-env production --progress --config webpack.js",
+		"dev": "webpack --node-env development --progress --config webpack.js",
+		"watch": "webpack --node-env development --progress --watch --config webpack.js",
+		"serve": "webpack --node-env development serve --progress --config webpack.js",
 	}
 ...
 ```
