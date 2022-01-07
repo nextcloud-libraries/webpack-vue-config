@@ -1,9 +1,21 @@
 # Changelog
 
+## [v4.3.0](https://github.com/nextcloud/webpack-vue-config/tree/v4.3.0) (2022-01-07)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.2.0...v4.3.0)
+
+**Fixed bugs:**
+
+- Bump dependencies [\#269](https://github.com/nextcloud/webpack-vue-config/pull/269) ([skjnldsv](https://github.com/skjnldsv))
+
+**Merged pull requests:**
+
+- Change webpack config for more platform independency [\#268](https://github.com/nextcloud/webpack-vue-config/pull/268) ([dartcafe](https://github.com/dartcafe))
 ## [v4.2.0](https://github.com/nextcloud/webpack-vue-config/tree/v4.2.0) (2021-11-29)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.1.2...v4.2.0)
 
+- 4.2.0 [\#253](https://github.com/nextcloud/webpack-vue-config/pull/253) ([artonge](https://github.com/artonge))
 - Update npm and node engines versions by @nextcloud-command in <https://github.com/nextcloud/webpack-vue-config/pull/241>
 - Bump eslint-webpack-plugin from 3.1.0 to 3.1.1 by @dependabot in <https://github.com/nextcloud/webpack-vue-config/pull/244>
 - Fix HMR by @jotoeri in <https://github.com/nextcloud/webpack-vue-config/pull/246>
