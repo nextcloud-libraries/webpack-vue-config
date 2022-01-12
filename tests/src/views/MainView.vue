@@ -22,12 +22,22 @@
   -->
 
 <template>
-	<div>This is some dummy content for the app</div>
+	<div :style="style" class="test" role="note">
+		This is some dummy content for the app
+	</div>
 </template>
 
 <script>
 export default {
 	name: 'MainView',
+
+	data() {
+		return {
+			style: {
+				position: 'absolute',
+			},
+		}
+	},
 }
 </script>
 
