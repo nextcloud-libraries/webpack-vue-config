@@ -1,5 +1,17 @@
 # Changelog
 
+## [v4.3.1](https://github.com/nextcloud/webpack-vue-config/tree/v4.3.1) (2022-01-17)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.3.0...v4.3.1)
+
+**Dependencies updates:**
+
+- Unpin webpack version [\#275](https://github.com/nextcloud/webpack-vue-config/pull/275) ([artonge](https://github.com/artonge))
+- Bump stylelint-webpack-plugin from 3.1.0 to 3.1.1 [\#277](https://github.com/nextcloud/webpack-vue-config/pull/277) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump sass from 1.47.0 to 1.48.0 [\#276](https://github.com/nextcloud/webpack-vue-config/pull/276) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump sass to 1.47.0 [\#273](https://github.com/nextcloud/webpack-vue-config/pull/273) ([skjnldsv](https://github.com/skjnldsv))
+- Bump sass from 1.46.0 to 1.47.0 [\#271](https://github.com/nextcloud/webpack-vue-config/pull/271) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v4.3.0](https://github.com/nextcloud/webpack-vue-config/tree/v4.3.0) (2022-01-07)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.2.0...v4.3.0)
@@ -10,6 +22,7 @@
 
 **Merged pull requests:**
 
+- 4.3.0 [\#270](https://github.com/nextcloud/webpack-vue-config/pull/270) ([skjnldsv](https://github.com/skjnldsv))
 - Change webpack config for more platform independency [\#268](https://github.com/nextcloud/webpack-vue-config/pull/268) ([dartcafe](https://github.com/dartcafe))
 ## [v4.2.0](https://github.com/nextcloud/webpack-vue-config/tree/v4.2.0) (2021-11-29)
 
