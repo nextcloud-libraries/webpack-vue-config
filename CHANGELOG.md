@@ -1,5 +1,17 @@
 # Changelog
 
+## [v5.0.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.0.0) (2022-01-18)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.3.2...v5.0.0)
+
+**Fixed bugs:**
+
+- Fix devDependencies [\#279](https://github.com/nextcloud/webpack-vue-config/pull/279) ([skjnldsv](https://github.com/skjnldsv))
+
+**Merged pull requests:**
+
+- ⚠️ Eslint 8 [\#274](https://github.com/nextcloud/webpack-vue-config/pull/274) ([skjnldsv](https://github.com/skjnldsv))
+
 ## [v4.3.2](https://github.com/nextcloud/webpack-vue-config/tree/v4.3.2) (2022-01-18)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.3.1...v4.3.2)
