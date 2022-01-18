@@ -1,5 +1,13 @@
 # Changelog
 
+## [v4.3.2](https://github.com/nextcloud/webpack-vue-config/tree/v4.3.2) (2022-01-18)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.3.1...v4.3.2)
+
+**Fixed bugs:**
+
+- Fix devDependencies [\#279](https://github.com/nextcloud/webpack-vue-config/pull/279) ([skjnldsv](https://github.com/skjnldsv))
+
 ## [v4.3.1](https://github.com/nextcloud/webpack-vue-config/tree/v4.3.1) (2022-01-17)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.3.0...v4.3.1)
