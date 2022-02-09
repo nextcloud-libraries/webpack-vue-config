@@ -74,7 +74,7 @@ module.exports = {
 			'Access-Control-Allow-Origin': '*',
 		},
 	},
-	
+
 	optimization: {
 		chunkIds: 'named',
 		splitChunks: {
@@ -121,6 +121,7 @@ module.exports = {
 
 	resolve: {
 		extensions: ['*', '.js', '.vue'],
+		enforceExtension: false,
 		symlinks: false,
 	},
 }
