@@ -24,9 +24,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const { VueLoaderPlugin } = require('vue-loader')
-const ESLintPlugin = require('eslint-webpack-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
-const StyleLintPlugin = require('stylelint-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 const appName = process.env.npm_package_name
@@ -98,17 +96,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new ESLintPlugin({
-			extensions: ['js', 'vue'],
-			files: 'src',
-			failOnError: !isDev,
-		}),
-
 		new VueLoaderPlugin(),
-		new StyleLintPlugin({
-			files: 'src/**/*.{css,scss,vue}',
-			failOnError: !isDev,
-		}),
 
 		// Make sure we auto-inject node polyfills on demand
 		// https://webpack.js.org/blog/2020-10-10-webpack-5-release/#automatic-nodejs-polyfills-removed
