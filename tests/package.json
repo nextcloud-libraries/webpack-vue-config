@@ -16,10 +16,10 @@
 	"devDependencies": {
 		"@nextcloud/babel-config": "^1.1.1",
 		"@nextcloud/browserslist-config": "^3.0.1",
-		"@nextcloud/eslint-config": "^8.3.0",
-		"@nextcloud/stylelint-config": "^3.0.0"
+		"@nextcloud/eslint-config": "github:nextcloud/eslint-config#vue3",
+		"@nextcloud/stylelint-config": "^3.0.1"
 	},
 	"dependencies": {
-		"vue": "^2.7.16"
+		"vue": "^3.4.27"
 	}
 }
