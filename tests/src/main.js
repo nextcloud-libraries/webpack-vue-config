@@ -19,13 +19,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
-import Vue from 'vue'
-import MainView from './views/MainView'
+import { createApp } from 'vue'
+import App from './App.vue'
 
 // Init vue
-export default new Vue({
-	el: '#content',
-	// eslint-disable-next-line vue/match-component-file-name
-	name: 'AppRoot',
-	render: h => h(MainView),
-})
+export default createApp(App)
+	.mount('#content')
