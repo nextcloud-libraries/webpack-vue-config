@@ -1,5 +1,25 @@
 # Changelog
 
+## [v5.1.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.1.0) (2022-04-30)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.0.0...v5.1.0)
+
+**Implemented enhancements:**
+
+- Do not lint during build [\#318](https://github.com/nextcloud/webpack-vue-config/pull/318) ([skjnldsv](https://github.com/skjnldsv))
+
+**Merged pull requests:**
+
+- @nextcloud/eslint-config^8.0.0 compatibility
+- Bump @babel/core to 7.17.10
+- Bump async to 2.6.4
+- Bump babel-loader to 8.2.5
+- Bump css-loader to 6.7.1
+- Bump eslint to 8.11.0
+- Bump minimist to 1.2.6
+- Bump node-forge to 1.3.0
+- Bump sass to 1.51.0
+- Bump stylelint to 14.6.0
 ## [v5.0.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.0.0) (2022-01-18)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v4.3.2...v5.0.0)
