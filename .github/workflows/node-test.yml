@@ -1,4 +1,4 @@
-name: Build
+name: Node
 
 on:
   pull_request:
