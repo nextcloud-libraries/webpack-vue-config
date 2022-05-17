@@ -28,6 +28,7 @@ const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 const appName = process.env.npm_package_name
+	.replace('@nextcloud/', '')
 const appVersion = process.env.npm_package_version
 const buildMode = process.env.NODE_ENV
 const isDev = buildMode === 'development'
@@ -72,7 +73,7 @@ module.exports = {
 			'Access-Control-Allow-Origin': '*',
 		},
 	},
-	
+
 	optimization: {
 		chunkIds: 'named',
 		splitChunks: {
