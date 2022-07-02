@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.2.1](https://github.com/nextcloud/webpack-vue-config/tree/v5.2.1) (2022-07-02)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.2.0...v5.2.1)
+
+**Fixed bugs:**
+
+- Fix vue-template-compiler version [\#356](https://github.com/nextcloud/webpack-vue-config/pull/356) ([skjnldsv](https://github.com/skjnldsv))
+
 ## [v5.2.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.2.0) (2022-07-02)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.1.0...v5.2.0)
