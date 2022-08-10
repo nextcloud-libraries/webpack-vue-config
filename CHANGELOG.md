@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.3.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.3.0) (2022-08-10)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.2.1...v5.3.0)
+
+**Changed:**
+
+- Update engines versions to Node 16 with Npm 7 or Npm 8
+
 ## [v5.2.1](https://github.com/nextcloud/webpack-vue-config/tree/v5.2.1) (2022-07-02)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.2.0...v5.2.1)
