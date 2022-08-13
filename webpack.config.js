@@ -73,6 +73,8 @@ module.exports = {
 		},
 	},
 	
+	cache: !isDev,
+	
 	optimization: {
 		chunkIds: 'named',
 		splitChunks: {
