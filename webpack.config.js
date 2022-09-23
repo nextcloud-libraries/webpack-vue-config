@@ -46,8 +46,14 @@ module.exports = {
 	output: {
 		path: path.resolve('./js'),
 		publicPath: path.join('/apps/', appName, '/js/'),
+		
+		// Output file names
 		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
+
+		// Clean output before each build
+		clean: true,
+
 		// Make sure sourcemaps have a proper path and do not
 		// leak local paths https://github.com/webpack/webpack/issues/3603
 		devtoolNamespace: appName,
