@@ -1,5 +1,22 @@
 # Changelog
 
+## [v5.4.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.4.0) (2022-10-25)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.3.0...v5.4.0)
+
+**Changed:**
+
+* Upgrade packages minors and fix deep selector support [\#399](https://github.com/nextcloud/webpack-vue-config/pull/399) ([skjnldsv](https://github.com/skjnldsv))
+  * @babel/core from `^7.16.7` to `^7.19.6`
+  * babel-loader from `^8.2.3` to `^8.2.5`
+  * css-loader from `^6.5.1` to `^6.7.1`
+  * sass from `^1.47.0` to `^1.55.0`
+  * sass-loader from `^13.0.1` to `^13.1.0`
+  * vue-loader from `^15.9.8` to `^15.10.0`
+  * vue-template-compiler from `^2.7.0` to `^2.7.13`
+  * webpack from `^5.66.0` to `^5.74.0`
+  * webpack-cli from `^4.9.1` to `^4.10.0`
+  * webpack-dev-server from `^4.7.2` to `^4.11.1`
 ## [v5.3.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.3.0) (2022-08-10)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.2.1...v5.3.0)
