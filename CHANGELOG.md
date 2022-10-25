@@ -17,6 +17,7 @@
   * webpack from `^5.66.0` to `^5.74.0`
   * webpack-cli from `^4.9.1` to `^4.10.0`
   * webpack-dev-server from `^4.7.2` to `^4.11.1`
+
 ## [v5.3.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.3.0) (2022-08-10)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.2.1...v5.3.0)
