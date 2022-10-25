@@ -44,5 +44,9 @@ export default {
 <style lang="scss" scoped>
 html {
 	background-color: red;
+
+	:deep(.test) {
+		background-color: blue;
+	}
 }
 </style>

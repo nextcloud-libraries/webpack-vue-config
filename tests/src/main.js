@@ -20,7 +20,7 @@
  *
  */
 import Vue from 'vue'
-import MainView from './views/MainView'
+import MainView from './views/MainView.vue'
 
 // Init vue
 export default new Vue({
