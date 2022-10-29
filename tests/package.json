@@ -10,9 +10,6 @@
 	},
 	"author": "John Molakvoæ <skjnldsv@protonmail.com>",
 	"license": "AGPL-3.0-or-later",
-	"dependencies": {
-		"vue": "^2.7.13"
-	},
 	"browserslist": [
 		"extends @nextcloud/browserslist-config"
 	],
@@ -21,5 +18,8 @@
 		"@nextcloud/browserslist-config": "^2.3.0",
 		"@nextcloud/eslint-config": "^8.1.2",
 		"@nextcloud/stylelint-config": "^2.3.0"
+	},
+	"dependencies": {
+		"vue": "^2.7.11"
 	}
 }
