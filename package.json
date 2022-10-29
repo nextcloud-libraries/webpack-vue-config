@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "@babel/core": "^7.19.6",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.0.0",
     "css-loader": "^6.7.1",
     "node-polyfill-webpack-plugin": "2.0.1",
     "sass": "^1.55.0",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.0.0",
     "css-loader": "^6.7.1",
     "node-polyfill-webpack-plugin": "2.0.1",
     "sass": "^1.55.0",
