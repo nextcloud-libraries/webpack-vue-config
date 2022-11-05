@@ -20,6 +20,6 @@
 		"@nextcloud/stylelint-config": "^2.3.0"
 	},
 	"dependencies": {
-		"vue": "^2.7.11"
+		"vue": "^2.7.13"
 	}
 }
