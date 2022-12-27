@@ -38,6 +38,11 @@
 		loader: 'babel-loader',
 		exclude: /node_modules/,
 	},
+	RULE_TS: {
+		test: /\.tsx?$/,
+		loader: 'babel-loader',
+		exclude: /node_modules/,
+	},
 	RULE_ASSETS: {
 		test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf)$/,
 		type: 'asset/inline',
