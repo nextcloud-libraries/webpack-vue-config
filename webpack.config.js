@@ -116,7 +116,7 @@ module.exports = {
 	],
 
 	resolve: {
-		extensions: ['*', '.js', '.vue'],
+		extensions: ['*', '.ts', '.js', '.vue'],
 		symlinks: false,
 	},
 }
