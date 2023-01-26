@@ -42,10 +42,11 @@ __webpack_public_path__ = generateFilePath(appName, '', 'js/')
 
 You can then start you dev serve with `npm serve` or `make serve-js` if you added this step in your makefile.
 
-If your nextcloud hostname is different from `localhost`, you need to start the server like so:
+- Your Nextcloud server hostname will probably be different than `localhost`. In that case, you will need specify it with `--allowed-hosts`.
+- Your public path will probably not be `/apps/{app-name}/js`. In that case, you will need to specify it with `--static-public-path`.
 
 ```shell
-npm run serve -- --allowed-hosts your-hostname.example
+npm run serve -- --allowed-hosts your-hostname.example [other-hostname.example ...] --static-public-path /your/custom/public/path
 ```
 
 ## Extend with your own configs
@@ -67,7 +68,7 @@ module.exports = webpackConfig
 ### Replace/edit existing rule
 All the rules are available individually on the `@nextcloud/webpack-vue-config/rules` file. You can import them and use the one you want.
 
-If you want to overrride a rule that is already provided by this package, you can use the following to replace it:
+If you want to override a rule that is already provided by this package, you can use the following to replace it:
 
 ```js
 // webpack.config.js
