@@ -46,7 +46,7 @@ module.exports = {
 	output: {
 		path: path.resolve('./js'),
 		publicPath: path.join('/apps/', appName, '/js/'),
-		
+
 		// Output file names
 		filename: `${appName}-[name].js?v=[contenthash]`,
 		chunkFilename: `${appName}-[name].js?v=[contenthash]`,
@@ -78,9 +78,9 @@ module.exports = {
 			'Access-Control-Allow-Origin': '*',
 		},
 	},
-	
+
 	cache: !isDev,
-	
+
 	optimization: {
 		chunkIds: 'named',
 		splitChunks: {
@@ -108,7 +108,10 @@ module.exports = {
 
 		// Make sure we auto-inject node polyfills on demand
 		// https://webpack.js.org/blog/2020-10-10-webpack-5-release/#automatic-nodejs-polyfills-removed
-		new NodePolyfillPlugin(),
+		new NodePolyfillPlugin({
+			// These modules available in the web-browser
+			excludeAliases: ['console', 'Buffer'],
+		}),
 
 		// Make appName & appVersion available as a constant
 		new webpack.DefinePlugin({ appName: JSON.stringify(appName) }),
