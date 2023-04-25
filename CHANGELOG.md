@@ -1,5 +1,15 @@
 # Changelog
 
+## [v5.5.1](https://github.com/nextcloud/webpack-vue-config/tree/v5.5.1) (2023-04-25)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.5.0...v5.5.1)
+
+#### :bug: Bug Fix
+* [#449](https://github.com/nextcloud/webpack-vue-config/pull/449) Do not polyfill available in a web browser Node modules ([@ShGKme](https://github.com/ShGKme))
+
+#### Committers: 1
+- Grigorii K. Shartsev ([@ShGKme](https://github.com/ShGKme))
+
 ## [v5.5.0](https://github.com/nextcloud/webpack-vue-config/tree/v5.5.0) (2023-03-15)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.4.0...v5.5.0)
