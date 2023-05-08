@@ -78,9 +78,7 @@ module.exports = {
 			'Access-Control-Allow-Origin': '*',
 		},
 	},
-
-	cache: !isDev,
-
+	
 	optimization: {
 		chunkIds: 'named',
 		splitChunks: {
