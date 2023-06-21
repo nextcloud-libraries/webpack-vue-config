@@ -23,8 +23,8 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": "^16.0.0",
-    "npm": "^7.0.0 || ^8.0.0"
+    "node": "^20.0.0",
+    "npm": "^9.0.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.19.6",
