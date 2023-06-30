@@ -40,7 +40,10 @@
 	},
 	RULE_TS: {
 		test: /\.tsx?$/,
-		loader: 'babel-loader',
+		use: [
+			'babel-loader',
+			'ts-loader',
+		],
 		exclude: /node_modules/,
 	},
 	RULE_ASSETS: {
