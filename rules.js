@@ -32,6 +32,9 @@
 	RULE_VUE: {
 		test: /\.vue$/,
 		loader: 'vue-loader',
+		options: {
+			prettify: false,
+		},
 	},
 	RULE_JS: {
 		test: /\.js$/,
