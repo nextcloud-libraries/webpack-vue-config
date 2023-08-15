@@ -78,7 +78,7 @@ module.exports = {
 			'Access-Control-Allow-Origin': '*',
 		},
 	},
-	
+
 	optimization: {
 		chunkIds: 'named',
 		splitChunks: {
@@ -107,8 +107,8 @@ module.exports = {
 		// Make sure we auto-inject node polyfills on demand
 		// https://webpack.js.org/blog/2020-10-10-webpack-5-release/#automatic-nodejs-polyfills-removed
 		new NodePolyfillPlugin({
-			// These modules available in the web-browser
-			excludeAliases: ['console', 'Buffer'],
+			// Console is available in the web-browser
+			excludeAliases: ['console'],
 		}),
 
 		// Make appName & appVersion available as a constant
