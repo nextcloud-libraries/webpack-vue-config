@@ -1,5 +1,33 @@
 # Changelog
 
+## [v6.0.0](https://github.com/nextcloud/webpack-vue-config/tree/v6.0.0) (2023-08-16)
+
+[Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.5.1...v6.0.0)
+
+### Breaking
+* chore: update node engines to next LTS by @nextcloud-command in https://github.com/nextcloud-libraries/webpack-vue-config/pull/470
+  We now supports node `^20.0.0` and npm `^9.0.0`
+
+### :bug: Bug Fix
+* fix: pass ts to ts-loader before babel by @skjnldsv in https://github.com/nextcloud-libraries/webpack-vue-config/pull/472
+* fix: polyfill node:Buffer by default by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/489
+* Revert "Disable cache in dev mode" by @pulsejet in https://github.com/nextcloud-libraries/webpack-vue-config/pull/456
+* Update rules to prevent prettier to run by @christianlupus in https://github.com/nextcloud-libraries/webpack-vue-config/pull/475
+
+### Dependencies
+* chore: Fix URLs after package was transfered by @susnux in https://github.com/nextcloud-libraries/webpack-vue-config/pull/484
+* chore(deps-dev): Bump @babel/core from 7.22.1 to 7.22.10 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/488
+* chore(deps-dev): Bump @nextcloud/stylelint-config from 2.3.0 to 2.3.1 in /tests by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/477
+* chore(deps-dev): Bump babel-loader from 9.1.2 to 9.1.3 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/473
+* chore(deps-dev): Bump css-loader from 6.7.4 to 6.8.1 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/463
+* chore(deps-dev): Bump sass from 1.62.1 to 1.65.1 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/487
+* chore(deps-dev): Bump sass-loader from 13.3.0 to 13.3.2 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/467
+* chore(deps-dev): Bump webpack from 5.88.1 to 5.88.2 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/482
+* chore(deps-dev): Bump webpack-cli from 5.1.1 to 5.1.4 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/466
+* chore(deps-dev): Bump webpack-dev-server from 4.11.1 to 4.15.1 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/483
+* chore(deps-dev): Bump word-wrap from 1.2.3 to 1.2.4 in /tests by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/478
+* fix: dependencies and audit by @skjnldsv in https://github.com/nextcloud-libraries/webpack-vue-config/pull/485
+
 ## [v5.5.1](https://github.com/nextcloud-libraries/webpack-vue-config/tree/v5.5.1) (2023-04-25)
 
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v5.5.0...v5.5.1)
