@@ -54,4 +54,8 @@
 		test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf)$/,
 		type: 'asset/inline',
 	},
+	RULE_RAW: {
+		resourceQuery: /raw/,
+		type: 'asset/source',
+	},
  }
