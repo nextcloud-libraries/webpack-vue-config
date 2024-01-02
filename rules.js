@@ -32,10 +32,6 @@
 	RULE_VUE: {
 		test: /\.vue$/,
 		loader: 'vue-loader',
-		options: {
-			// Vue 2.7 with Prettier 3 bug. See: https://github.com/vuejs/vue/issues/13052
-			prettify: false,
-		},
 	},
 	RULE_JS: {
 		test: /\.js$/,
