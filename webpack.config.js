@@ -120,8 +120,8 @@ module.exports = {
 		// It has an unused function `localLocale` that requires locales by invalid relative path `./locale`
 		// Though it is not used, Webpack tries to resolve it with `require.context` and fails
 		new webpack.IgnorePlugin({
-			resourceRegExp: /^\.\/locale$/,
-			contextRegExp: /moment\/min$/,
+			resourceRegExp: /^\.[/\\]locale$/,
+			contextRegExp: /moment[/\\]min$/,
 		}),
 	],
 
