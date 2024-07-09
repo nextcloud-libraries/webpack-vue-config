@@ -1,3 +1,8 @@
+<!--
+  - SPDX-FileCopyrightText: 2019 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 [![npm last version](https://img.shields.io/npm/v/@nextcloud/webpack-vue-config.svg?style=flat-square)](https://www.npmjs.com/package/@nextcloud/webpack-vue-config)
 [![Dependabot status](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg?longCache=true&style=flat-square&logo=dependabot)](https://dependabot.com)
 

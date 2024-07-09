@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Changelog
 
 ## [v6.0.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.0.1) (2024-01-29)
