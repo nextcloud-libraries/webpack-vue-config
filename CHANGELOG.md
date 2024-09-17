@@ -4,6 +4,11 @@
 -->
 # Changelog
 
+## [v6.1.0](https://github.com/nextcloud/webpack-vue-config/tree/v6.1.0) (2024-09-17)
+* Update package npm version by @skjnldsv in https://github.com/nextcloud-libraries/webpack-vue-config/pull/608
+* Fix npm audit by @nextcloud-command in https://github.com/nextcloud-libraries/webpack-vue-config/pull/609
+* Dependencies update
+
 ## [v6.0.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.0.1) (2024-01-29)
 
 [Full Changelog](https://github.com/nextcloud/webpack-vue-config/compare/v5.5.1...v6.0.0)
