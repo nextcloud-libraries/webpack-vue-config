@@ -89,7 +89,9 @@ module.exports = {
 
 		// Make sure we auto-inject node polyfills on demand
 		// https://webpack.js.org/blog/2020-10-10-webpack-5-release/#automatic-nodejs-polyfills-removed
-		new NodePolyfillPlugin(),
+		new NodePolyfillPlugin({
+			additionalAliases: ['process'],
+		}),
 
 		// Make appName & appVersion available as a constant
 		new webpack.DefinePlugin({ appName: JSON.stringify(appName) }),
