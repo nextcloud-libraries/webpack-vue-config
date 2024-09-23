@@ -4,6 +4,12 @@
 -->
 # Changelog
 
+## [v6.1.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.1.1) (2024-09-23)
+
+### 🐛 Bug Fix
+
+* fix: include `process` Node polyfill by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/613
+
 ## [v6.1.0](https://github.com/nextcloud/webpack-vue-config/tree/v6.1.0) (2024-09-17)
 * Update package npm version by @skjnldsv in https://github.com/nextcloud-libraries/webpack-vue-config/pull/608
 * Fix npm audit by @nextcloud-command in https://github.com/nextcloud-libraries/webpack-vue-config/pull/609
