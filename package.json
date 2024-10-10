@@ -1,6 +1,6 @@
 {
   "name": "@nextcloud/webpack-vue-config",
-  "version": "6.1.1",
+  "version": "6.2.0",
   "description": "A webpack vue config for nextcloud apps",
   "author": "John Molakvoæ <skjnldsv@protonmail.com>",
   "license": "AGPL-3.0-or-later",

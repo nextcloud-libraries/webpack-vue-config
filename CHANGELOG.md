@@ -4,6 +4,23 @@
 -->
 # Changelog
 
+## [v6.2.0](https://github.com/nextcloud/webpack-vue-config/tree/v6.2.0) (2024-10-04)
+
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.1.1...v6.2.0)
+
+### ⚠️ Breaking
+
+* `sass-loader` is upgraded from `v14` to `v16` with modern Sass JS API.
+  This is not expected to be a breaking change. But it might affect configs with custom `sass` configuration.
+  See SASS docs for details: https://sass-lang.com/documentation/js-api/interfaces/legacystringoptions/
+
+### Dependencies
+
+* chore(deps-dev): Bump @babel/core from 7.25.2 to 7.25.7 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/618
+* chore(deps-dev): Bump sass from 1.79.3 to 1.79.4 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/617
+* chore(deps-dev): Bump webpack from 5.94.0 to 5.95.0 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/615
+* chore(deps-dev): Bump sass-loader from 14.2.1 to 16.0.2 by @dependabot in https://github.com/nextcloud-libraries/webpack-vue-config/pull/612
+
 ## [v6.1.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.1.1) (2024-09-23)
 
 ### 🐛 Bug Fix
