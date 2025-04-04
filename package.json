@@ -23,7 +23,8 @@
   "author": "John Molakvoæ <skjnldsv@protonmail.com>",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./scripts/postinstall.js"
+    "postinstall": "node ./scripts/postinstall.js",
+    "test": "node --test"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

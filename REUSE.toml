@@ -12,7 +12,7 @@ SPDX-FileCopyrightText = "2019 Nextcloud GmbH and Nextcloud contributors"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
 
 [[annotations]]
-path = ["tests/package-lock.json", "tests/package.json"]
+path = ["test-apps/vue2/package-lock.json", "test-apps/vue2/package.json", "test-apps/vue3/package-lock.json", "test-apps/vue3/package.json"]
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2019 Nextcloud GmbH and Nextcloud contributors"
+SPDX-FileCopyrightText = "2025 Nextcloud GmbH and Nextcloud contributors"
 SPDX-License-Identifier = "AGPL-3.0-or-later"

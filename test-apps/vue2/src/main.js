@@ -5,10 +5,8 @@
 import Vue from 'vue'
 import MainView from './views/MainView.vue'
 
-// Init vue
-export default new Vue({
+new Vue({
 	el: '#content',
-	// eslint-disable-next-line vue/match-component-file-name
 	name: 'AppRoot',
 	render: h => h(MainView),
 })
