@@ -20,7 +20,9 @@
  *
  */
 
- module.exports = {
+const esbuildTarget = 'es2015'
+
+module.exports = {
 	RULE_CSS: {
 		test: /\.css$/,
 		use: ['style-loader', 'css-loader'],
@@ -35,15 +37,19 @@
 	},
 	RULE_JS: {
 		test: /\.js$/,
-		loader: 'babel-loader',
+		loader: 'esbuild-loader',
+		options: {
+			loader: 'js', // Fix loading Vue SFCs
+			target: esbuildTarget,
+		},
 		exclude: /node_modules/,
 	},
 	RULE_TS: {
 		test: /\.tsx?$/,
-		use: [
-			'babel-loader',
-			'ts-loader',
-		],
+		loader: 'esbuild-loader',
+		options: {
+			target: esbuildTarget,
+		},
 		exclude: /node_modules/,
 	},
 	RULE_ASSETS: {
