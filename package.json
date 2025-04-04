@@ -32,7 +32,6 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.4.4",
     "vue-loader": "^15.10.1",
-    "vue-template-compiler": "^2.7.16",
     "webpack": "^5.88.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.0.2"
@@ -48,7 +47,6 @@
     "ts-loader": "^9.4.4",
     "vue": "^2.7.16",
     "vue-loader": "^15.10.1",
-    "vue-template-compiler": "^2.7.16",
     "webpack": "^5.88.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.0.2"
