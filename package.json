@@ -22,6 +22,9 @@
   "license": "AGPL-3.0-or-later",
   "author": "John Molakvoæ <skjnldsv@protonmail.com>",
   "main": "index.js",
+  "scripts": {
+    "postinstall": "node ./scripts/postinstall.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "babel-loader": "^10.0.0",
@@ -31,6 +34,7 @@
     "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.4.4",
+    "vue": "^2.7.16",
     "vue-loader": "^15.11.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^6.0.1",
@@ -45,8 +49,8 @@
     "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.4.4",
-    "vue": "^2.7.16",
-    "vue-loader": "^15.10.1",
+    "vue": "^2.7.16 || ^3.5.13",
+    "vue-loader": "^15.11.1 || ^17.4.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.0.2"
