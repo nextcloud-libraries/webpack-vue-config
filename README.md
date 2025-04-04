@@ -32,6 +32,28 @@ module.exports = webpackConfig
 ...
 ```
 
+## Note on Vue 2 support
+
+This package supports both **Vue 2** and **Vue 3** by installing legacy `vue-loader` for Vue 2 in a `postinstall` script.
+
+In Vue 2 it may result in different `vue-loader` version in the `package-lock.json` and `node_modules`.
+
+### Troubleshooting in Vue 2 apps
+
+In case of `npm error code ENOTEMPTY` - remove `node_modules` and try again:
+
+```sh
+# In case of "npm error code ENOTEMPTY" in Vue 2
+rm -rf node_modules
+```
+
+To avoid any errors and have explicitly specified `vue-loader` - install it as dependency:
+
+```sh
+# Install legacy vue-loader for Vue 2
+npm i -D vue-loader@legacy
+```
+
 ## Hot module replacement
 
 To enjoy hot module replacement, follow those instructions:
