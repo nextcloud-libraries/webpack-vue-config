@@ -24,43 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Read package.json node and npm engines version
-        uses: skjnldsv/read-package-engines-version-actions@v1.2
-        id: versions
-        with:
-          fallbackNode: '^12'
-          fallbackNpm: '^6'
-
-      - name: Set up node ${{ steps.versions.outputs.nodeVersion }}
+      - name: Set up node
         uses: actions/setup-node@v3
-        with:
-          node-version: ${{ steps.versions.outputs.nodeVersion }}
-
-      - name: Set up npm ${{ steps.versions.outputs.npmVersion }}
-        run: npm i -g npm@"${{ steps.versions.outputs.npmVersion }}"
-
-      - name: Install webpack-vue-config dependencies & build lib
-        run: |
-          npm ci
-          npm pack
 
       - name: Install dependencies
-        run: |
-          cd tests
-          npm ci
-          # Manually install dependency to check for incompatibilities
-          version=$(cat ../package.json | jq --raw-output .version)
-          npm install -D ../nextcloud-webpack-vue-config-$version.tgz
+        run: npm ci
 
-      - name: Build test app
-        run: |
-          # Build test app dev and production
-          cd tests
-          npm run dev
-          npm run build
-
-      - name: Lint with eslint and stylelint
-        run: |
-          cd tests
-          npm run lint
-          npm run stylelint
+      - name: Test
+        run: npm test
