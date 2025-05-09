@@ -109,12 +109,5 @@ module.exports = {
 
 	resolve: {
 		extensions: ['*', '.ts', '.js', '.vue'],
-		symlinks: false,
-		// Ensure npm does not duplicate vue dependency, and that npm link works for vue 3
-		// See https://github.com/vuejs/core/issues/1503
-		// See https://github.com/nextcloud/nextcloud-vue/issues/3281
-		alias: {
-			'vue$': path.resolve('./node_modules/vue')
-		},
 	},
 }
