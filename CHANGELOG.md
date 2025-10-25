@@ -4,6 +4,37 @@
 -->
 # Changelog
 
+## [v6.3.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.3.1) (2025-10-25)
+
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.3.0...v6.3.1)
+
+### Fixes
+* fix: remove `vue$` alias to support dependencies with different Vue version by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/672
+
+### Dependencies
+* chore(deps-dev): Bump webpack from 5.98.0 to 5.99.5 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/665
+* chore(deps-dev): Bump node-polyfill-webpack-plugin from 4.0.0 to 4.1.0 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/664
+* chore(deps-dev): Bump webpack from 5.99.5 to 5.99.6 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/667
+* chore(deps-dev): Bump http-proxy-middleware from 2.0.7 to 2.0.9 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/668
+* chore(deps-dev): Bump webpack from 5.99.6 to 5.99.7 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/669
+* chore(deps-dev): Bump sass from 1.86.3 to 1.87.0 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/670
+* chore(deps-dev): Bump @babel/core from 7.26.10 to 7.27.1 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/671
+* chore(deps-dev): Bump webpack from 5.99.7 to 5.99.8 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/673
+* chore(deps-dev): Bump sass from 1.87.0 to 1.89.0 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/675
+* chore(deps-dev): Bump webpack from 5.99.8 to 5.99.9 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/676
+* chore(deps-dev): Bump @babel/core from 7.27.1 to 7.27.4 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/677
+* chore(deps-dev): Bump sass from 1.89.0 to 1.89.1 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/678
+* chore(deps-dev): Bump webpack-dev-server from 5.2.1 to 5.2.2 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/680
+* chore(deps-dev): Bump sass from 1.89.1 to 1.89.2 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/681
+* chore(deps-dev): Bump pbkdf2 from 3.1.2 to 3.1.3 by @dependabot[bot] in https://github.com/nextcloud-libraries/webpack-vue-config/pull/683
+* [main] Fix npm audit by @nextcloud-command in https://github.com/nextcloud-libraries/webpack-vue-config/pull/684
+pull/686
+* [main] Fix npm audit by @nextcloud-command in https://github.com/nextcloud-libraries/webpack-vue-config/pull/687
+
+### Other changes
+* ci: update reuse.yml workflow from template by @susnux in https://github.com/nextcloud-libraries/webpack-vue-config/pull/685
+* ci: update npm-publish.yml workflow from template by @susnux in https://github.com/nextcloud-libraries/webpack-vue-config/
+
 ## [v6.3.0](https://github.com/nextcloud/webpack-vue-config/tree/v6.3.0) (2025-04-08)
 
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.2.0...v6.3.0)
