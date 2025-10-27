@@ -4,6 +4,20 @@
 -->
 # Changelog
 
+## [7.0.0](https://github.com/nextcloud/webpack-vue-config/tree/7.0.0) (2025-10-27)
+
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.3.1...7.0.0)
+
+### 💥 BREAKING CHANGES
+
+Apps on **Vue 2** are now required an explicit legacy `vue-loader` installation:
+
+```sh
+npm i -D vue-loader@legacy
+```
+
+- feat!: require explicit `vue-loader@legacy` for Vue 2, remove hidden install by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/688
+
 ## [v6.3.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.3.1) (2025-10-25)
 
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.3.0...v6.3.1)
