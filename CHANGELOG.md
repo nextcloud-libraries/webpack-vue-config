@@ -4,6 +4,14 @@
 -->
 # Changelog
 
+## [v6.3.2](https://github.com/nextcloud/webpack-vue-config/tree/v6.3.2) (2025-10-27)
+
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.3.1...v6.3.2)
+
+### Fixes
+* fix(deps): downgrade broken `node-polyfill-webpack-plugin` from 4.1.0 to 4.0.0 by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/691
+
+
 ## [v6.3.1](https://github.com/nextcloud/webpack-vue-config/tree/v6.3.1) (2025-10-25)
 
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.3.0...v6.3.1)
