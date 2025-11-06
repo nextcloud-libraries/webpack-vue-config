@@ -4,6 +4,14 @@
 -->
 # Changelog
 
+## [7.0.1](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.1) (2025-11-07)
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.0...v7.0.1)
+
+### Changed
+* chore: update Node and NPM version by @susnux in https://github.com/nextcloud-libraries/webpack-vue-config/pull/695
+  This package now does officially work with Node 22 and Node 24.
+* ci: update workflows from organization by @susnux in https://github.com/nextcloud-libraries/webpack-vue-config/pull/694
+
 ## [7.0.0](https://github.com/nextcloud/webpack-vue-config/tree/7.0.0) (2025-11-03)
 
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v6.3.2...7.0.0)
