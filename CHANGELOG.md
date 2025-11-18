@@ -4,6 +4,12 @@
 -->
 # Changelog
 
+## [7.0.2](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.2) (2025-11-18)
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.1...v7.0.2)
+
+### Fixes
+* fix: define vue compile time flags by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/698
+
 ## [7.0.1](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.1) (2025-11-07)
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.0...v7.0.1)
 
