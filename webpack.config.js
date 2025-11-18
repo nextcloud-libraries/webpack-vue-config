@@ -93,9 +93,22 @@ module.exports = {
 			additionalAliases: ['process'],
 		}),
 
-		// Make appName & appVersion available as a constant
-		new webpack.DefinePlugin({ appName: JSON.stringify(appName) }),
-		new webpack.DefinePlugin({ appVersion: JSON.stringify(appVersion) }),
+		new webpack.DefinePlugin({ 
+			// Make appName & appVersion available as a constant
+			appName: JSON.stringify(appName),
+			appVersion: JSON.stringify(appVersion),
+			// Vue compile time flags
+			// See: https://vuejs.org/api/compile-time-flags.html#compile-time-flags
+			// See: https://github.com/vuejs/core/blob/v3.5.24/packages/vue/README.md#bundler-build-feature-flags
+			// > The build will work without configuring these flags,
+			// > however it is strongly recommended to properly configure them in order to get proper tree-shaking in the final bundle
+			// Unlike Vite plugin, vue-loader does not do this automatically for Webpack
+			// Although documentation says, it is optional, sometimes it breaks with:
+			// ReferenceError: __VUE_PROD_DEVTOOLS__ is not defined
+			__VUE_OPTIONS_API__: JSON.parse(process.env.__VUE_OPTIONS_API__ ?? 'true'),
+			__VUE_PROD_DEVTOOLS__: JSON.parse(process.env.__VUE_PROD_DEVTOOLS__ ?? 'false'),
+			__VUE_PROD_HYDRATION_MISMATCH_DETAILS__: JSON.parse(process.env.__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ ?? 'false'),
+		}),
 
 		// @nextcloud/moment since v1.3.0 uses `moment/min/moment-with-locales.js`
 		// Which works only in Node.js and is not compatible with Webpack bundling
