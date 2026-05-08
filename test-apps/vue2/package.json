@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@nextcloud/babel-config": "^1.2.0",
 		"@nextcloud/browserslist-config": "^3.0.1",
-		"vue-loader": "^15.11.1"
+		"vue-loader": "^17.4.2"
 	},
 	"dependencies": {
 		"vue": "^2.7.16"
