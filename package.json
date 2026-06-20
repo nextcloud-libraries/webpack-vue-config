@@ -27,7 +27,7 @@
     "test": "node --test"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.9",
+    "@babel/core": "^8.0.1",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.1",
     "node-polyfill-webpack-plugin": "4.1.0",
@@ -42,7 +42,7 @@
     "webpack-dev-server": "^5.0.2"
   },
   "peerDependencies": {
-    "@babel/core": "^7.22.9",
+    "@babel/core": "^8.0.1",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.1",
     "node-polyfill-webpack-plugin": "4.1.0",
