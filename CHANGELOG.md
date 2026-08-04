@@ -4,6 +4,12 @@
 -->
 # Changelog
 
+## [7.0.3](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.3) (2026-08-04)
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.2...v7.0.3)
+
+### Fixes
+* fix: workaround for broken styles by BOM chars with postcss >=8.5.24 with mini-css-extract-plugin by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/798
+
 ## [7.0.2](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.2) (2025-11-18)
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.1...v7.0.2)
 
