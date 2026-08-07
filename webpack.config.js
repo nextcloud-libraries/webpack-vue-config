@@ -8,7 +8,7 @@ const webpack = require('webpack')
 
 const { VueLoaderPlugin } = require('vue-loader')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
+const MinimizerPlugin = require('minimizer-webpack-plugin')
 
 const appName = process.env.npm_package_name
 const appVersion = process.env.npm_package_version
@@ -69,11 +69,11 @@ module.exports = {
 		},
 		minimize: !isDev,
 		minimizer: [
-			new TerserPlugin({
-				terserOptions: {
-					output: {
+			new MinimizerPlugin({
+				minimizerOptions: {
+					format: {
 						comments: false,
-					}
+					},
 				},
 				extractComments: true,
 			}),
