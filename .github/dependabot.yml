@@ -9,6 +9,12 @@ updates:
       day: saturday
       time: "03:00"
       timezone: Europe/Paris
+    ignore:
+      # ignore versions > 4.0.0
+      # 4.1.0 breaks build with additionalAliases: ['process']
+      # See: https://github.com/Richienb/node-polyfill-webpack-plugin/issues/62
+      - dependency-name: "node-polyfill-webpack-plugin"
+        versions: [ "^4.1.0" ]
     open-pull-requests-limit: 10
     labels:
     - dependencies
