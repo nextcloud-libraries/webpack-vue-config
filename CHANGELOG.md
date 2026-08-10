@@ -4,6 +4,17 @@
 -->
 # Changelog
 
+## [7.0.4](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.4) (2026-08-10)
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.3...v7.0.4)
+
+### Fixes
+* fix(deps): downgrade `webpack-cli` from `7.0.0` to `6.0.1` to avoid breaking changes with `--node-env` CLI option by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/803
+* fix(deps): downgrade broken `node-polyfill-webpack-plugin` to 4.0.0 by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/802
+
+### Changes
+* build: replace `terser-webpack-plugin` with its actual renamed version `minimizer-webpack-plugin` by @ShGKme in https://github.com/nextcloud-libraries/webpack-vue-config/pull/805
+
+
 ## [7.0.3](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.3) (2026-08-04)
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.2...v7.0.3)
 
