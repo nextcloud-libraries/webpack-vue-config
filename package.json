@@ -26,21 +26,6 @@
     "postinstall": "node ./scripts/postinstall.js",
     "test": "node --test"
   },
-  "devDependencies": {
-    "@babel/core": "^7.22.9",
-    "babel-loader": "^10.0.0",
-    "css-loader": "^7.1.1",
-    "node-polyfill-webpack-plugin": "4.1.0",
-    "sass": "^1.64.2",
-    "sass-loader": "^17.0.0",
-    "style-loader": "^4.0.0",
-    "ts-loader": "^9.4.4",
-    "vue": "^2.7.16",
-    "vue-loader": "^15.11.1",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^7.0.0",
-    "webpack-dev-server": "^6.0.0"
-  },
   "peerDependencies": {
     "@babel/core": "^7.22.9",
     "babel-loader": "^10.0.0",
