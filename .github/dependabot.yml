@@ -20,12 +20,15 @@ updates:
     - dependencies
 
   - package-ecosystem: npm
-    directory: "/tests"
+    directory: "/test-apps/vue2"
     schedule:
       interval: weekly
       day: saturday
       time: "03:00"
       timezone: Europe/Paris
+    ignore:
+      - dependency-name: "vue-loader"
+        versions: [ ">=16.0.0" ]
     open-pull-requests-limit: 10
     labels:
     - dependencies
