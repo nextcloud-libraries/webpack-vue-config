@@ -27,7 +27,7 @@
     "test": "node --test"
   },
   "peerDependencies": {
-    "@babel/core": "^7.22.9",
+    "@babel/core": "^7.22.9 || ^8.0.0",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.5",
     "minimizer-webpack-plugin": "^5.6.1",
