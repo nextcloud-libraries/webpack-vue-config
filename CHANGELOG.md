@@ -4,6 +4,23 @@
 -->
 # Changelog
 
+## [7.1.0](https://github.com/nextcloud/webpack-vue-config/tree/v7.1.0) (2026-10-14)
+[Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.4...v7.1.0)
+
+## Added
+* chore(deps): add `@babel/core@8` support [#834](https://github.com/nextcloud-libraries/webpack-vue-config/pull/834) ([Antreesy](https://github.com/Antreesy))
+
+### 📝 Note on support
+
+`@babel/core@8` requires Node `^22.18.0 || >=24.11.0` to function.
+`@babel/core@7` still works with Node `^20.0.0`.
+
+## Fixed
+* chore: bump css-loader and revert no longer needed workaround for BOM in chars after sass-loader [#811](https://github.com/nextcloud-libraries/webpack-vue-config/pull/811) ([ShGKme](https://github.com/ShGKme))
+
+## What's Changed
+* Updated dependencies
+
 ## [7.0.4](https://github.com/nextcloud/webpack-vue-config/tree/v7.0.4) (2026-08-10)
 [Full Changelog](https://github.com/nextcloud-libraries/webpack-vue-config/compare/v7.0.3...v7.0.4)
 

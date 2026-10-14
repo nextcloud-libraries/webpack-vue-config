@@ -1,6 +1,6 @@
 {
   "name": "@nextcloud/webpack-vue-config",
-  "version": "7.0.4",
+  "version": "7.1.0",
   "description": "A webpack vue config for nextcloud apps",
   "keywords": [
     "nextcloud",
